@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:file:/Users/NinjaLogix/Dev/Code/flyway-demo
     driver-class-name: org.h2.Driver
     username: user
     password: pass
@@ -11,6 +11,15 @@ spring:
     baseline-description: baseline
     baseline-version: 0
     table: example_schema_version
-    locations: classpath:com.logix.flywaydemo.migrations,classpath:db/migration
+
+    # - Manual setting for sql migrations. This is also the default path for sql migrations if no locations property is
+    #   set
+    locations: classpath:db/migration
+
+    # - Manual setting for Java migrations
+    #locations: classpath:com.logix.flywaydemo.migrations
+
+    # - If you wanted to use various locations you can supply flyway with an array of locations in the classpath
+    #locations: classpath:com.logix.flywaydemo.migrations,classpath:db/migration
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
