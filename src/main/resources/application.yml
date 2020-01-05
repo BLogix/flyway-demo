@@ -11,15 +11,10 @@ spring:
     baseline-description: baseline
     baseline-version: 0
     table: example_schema_version
-
-    # - Manual setting for sql migrations. This is also the default path for sql migrations if no locations property is
-    #   set
-    locations: classpath:db/migration
-
-    # - Manual setting for Java migrations
-    #locations: classpath:com.logix.flywaydemo.migrations
-
-    # - If you wanted to use various locations you can supply flyway with an array of locations in the classpath
-    #locations: classpath:com.logix.flywaydemo.migrations,classpath:db/migration
+    locations: classpath:db/migration # - Manual setting for sql migrations. This is also the default path for sql migrations
+    #locations: classpath:com.logix.flywaydemo.migrations # - Manual setting for Java migrations
+    #locations: classpath:com.logix.flywaydemo.migrations,classpath:db/migration # - If you wanted to use various locations you can supply flyway with an array of locations in the classpath
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
