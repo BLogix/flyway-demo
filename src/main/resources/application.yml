@@ -13,7 +13,7 @@ spring:
     table: example_schema_version
     locations: classpath:db/migration # - Manual setting for sql migrations. This is also the default path for sql migrations
     #locations: classpath:com.logix.flywaydemo.migrations # - Manual setting for Java migrations
-    #locations: classpath:com.logix.flywaydemo.migrations,classpath:db/migration # - If you wanted to use various locations you can supply flyway with an array of locations in the classpath
+    #locations: classpath:com.logix.flywaydemo.migrations,classpath:db/migration # - Mix and match for various migrations
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
