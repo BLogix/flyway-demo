@@ -6,7 +6,7 @@ plugins {
 }
 
 flyway {
-	url = 'jdbc:h2:file:/Users/NinjaLogix/Dev/Code/flyway-demo'
+	url = 'jdbc:h2:file:<Database File Location>'
 	user = 'user'
 	password = 'pass'
 	baselineOnMigrate = true
